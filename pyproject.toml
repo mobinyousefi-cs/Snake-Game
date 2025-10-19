@@ -1,0 +1,60 @@
+# ===================================================================
+# Project: Snake Game in Python
+# File: pyproject.toml
+# Author: Mobin Yousefi (GitHub: github.com/mobinyousefi)
+# Created: 2025-10-19
+# Updated: 2025-10-19
+# License: MIT License (see LICENSE file for details)
+# ===================================================================
+#
+# Description:
+# PEP 621 project metadata, build configuration, and tooling configs.
+# ===================================================================
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snake-game"
+version = "0.1.0"
+authors = [
+  { name = "Mobin Yousefi", email = "mobinyousefi.cs@gmail.com" }
+]
+description = "Classic Snake game with a testable engine and Turtle UI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["snake", "game", "turtle", "python", "arcade"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Topic :: Games/Entertainment",
+]
+
+[project.urls]
+Homepage = "https://github.com/mobinyousefi-cs/snake-game"
+
+[project.scripts]
+snake-game = "snake_game.main:main"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+  "black>=24.0",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP", "N", "B"]
+ignore = []
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"

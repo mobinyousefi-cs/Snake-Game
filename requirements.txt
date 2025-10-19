@@ -1,0 +1,16 @@
+# ===================================================================
+# Project: Snake Game in Python
+# File: requirements.txt
+# Author: Mobin Yousefi (GitHub: github.com/mobinyousefi)
+# Created: 2025-10-19
+# Updated: 2025-10-19
+# License: MIT License (see LICENSE file for details)
+# ===================================================================
+#
+# Description:
+# Additional pinned dependencies (prefer pyproject extras for dev tools).
+# ===================================================================
+
+pytest>=8
+ruff>=0.6
+black>=24.0
